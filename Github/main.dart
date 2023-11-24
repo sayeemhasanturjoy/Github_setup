@@ -4,5 +4,5 @@ void main()
   int x = 70;
   int y = 90;
 
-  print("The sum of x and y ");
+  print("The sum of  and y ");
 }
