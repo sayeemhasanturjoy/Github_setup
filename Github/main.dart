@@ -4,5 +4,5 @@ void main()
   int x = 70;
   int y = 90;
 
-  print(x );
+  print(x -y);
 }
