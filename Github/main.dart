@@ -141,7 +141,6 @@ void main (){
 //print( stobj.displayAllInfo());
   stobj.displayAllInfo();
 
-//print( tecobj.displayAllInfo());
 
 
 
