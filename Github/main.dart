@@ -1,6 +1,6 @@
 abstract class Role {
 
- void displayRole();
+  void displayRole();
 
 
 
@@ -9,58 +9,52 @@ abstract class Role {
 
 class  Person implements Role{
 
-  String? name ;
-  int? age ;
-  String? address;
+  late String? name ;
+  late int? age ;
+  late String? address;
 
   Person (this.name,this.age,this.address)
 
 
   {
 
-    this. name=name;
-    this.age=age;
-    this.address=address;
+    name=name;
+    age=age;
+    address=address;
   }
 
   @override
-  displayRole() {
-    // TODO: implement displayRole
-    throw UnimplementedError();
-  }
-
+  displayRole()
+  {}
 
 
 
 }
 
 
-class Student extends Person
+class Student extends Person  implements Role
 
 
 {
-  int? studentId  ;
-  String?  grade ;
-  List<int> courseScores=[];
+  late int? studentId  ;
+  late String?  grade ;
+  late  List<int> courseScores=[];
 
   Student(super.name,super.age,super.address,this.studentId,this.grade)
   {
 
-   this. name=name;
-   this.age=age;
-   this.address=address;
-   this.studentId=studentId;
-   this.grade=grade;
+    name=name;
+    age=age;
+    address=address;
+    studentId=studentId;
+    grade=grade;
   }
-
-
   @override
   displayRole()
-  {
-    print ("Role : Student");
+  {}
 
-  }
-    avgCal()
+
+  avgCal()
   {
 
     int  sum=0;
@@ -115,12 +109,12 @@ class Teacher extends Person
     print ("Role : Teacher");
   }
 
-   courseThought()
+  courseThought()
   {
     for (int i=0;i<courseTaught.length;i++)
 
     {
-      print ('-'+courseTaught[i] );
+      print ('-'+courseTaught[i].toString() );
     }
 
   }
@@ -139,17 +133,20 @@ class Teacher extends Person
 
 void main (){
 
-Student stobj=Student('John Doe',20,'123 Main st',1,'A' );
-stobj.courseScores=[10,20,3];
-print( stobj.displayAllInfo());
+  Student stobj=Student('John Doe',20,'123 Main st',1,'A' );
+  stobj.courseScores=[10,20,3];
+
+
+//print( stobj.displayAllInfo());
+  stobj.displayAllInfo();
+
+//print( tecobj.displayAllInfo());
 
 
 
+  Teacher tecobj=Teacher('Mrs. Smith',35,'456 Oak st', 3 );
+  tecobj.courseTaught=['Math','English' ,'Bangla'];
 
-
-Teacher tecobj=Teacher('Mrs. Smith',35,'456 Oak st', 3 );
-tecobj.courseTaught=['Math','English' ,'Bangla'];
-print( tecobj.displayAllInfo());
-
+  tecobj.displayAllInfo();
 
 }
