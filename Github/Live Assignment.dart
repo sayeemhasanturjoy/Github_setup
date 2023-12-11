@@ -26,6 +26,7 @@ class fruitsDiscount{
 
   }
 
+
 }
 DiscountCalculation(name,color ,price,discountPercentage)
 {
